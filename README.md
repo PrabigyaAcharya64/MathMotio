@@ -205,10 +205,9 @@ See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
 
 - [Manim Community](https://manim.community/) for the amazing animation library
 - [Google Gemini AI](https://ai.google.dev/) for powerful natural language processing
-- All contributors and users who help improve MathMotio
 
 
-**Made with ❤️ by the MathMotio Team**
+
 
 *Transform your mathematical ideas into visual reality!*
 
