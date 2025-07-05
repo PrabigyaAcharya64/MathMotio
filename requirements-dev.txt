@@ -1,0 +1,56 @@
+# MathMotio - Development Dependencies
+# Additional packages for development, testing, and code quality
+
+# Include base requirements
+-r requirements.txt
+
+# Code quality and formatting
+black>=22.0.0
+flake8>=5.0.0
+isort>=5.10.0
+mypy>=0.991
+pylint>=2.15.0
+bandit>=1.7.0
+
+# Testing frameworks
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.8.0
+pytest-asyncio>=0.21.0
+pytest-xdist>=2.5.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+sphinx-autodoc-typehints>=1.19.0
+myst-parser>=0.18.0
+
+# Development utilities
+pre-commit>=2.20.0
+tox>=3.25.0
+coverage>=6.4.0
+codecov>=2.1.0
+
+# Jupyter notebooks for testing
+jupyter>=1.0.0
+ipykernel>=6.15.0
+notebook>=6.4.0
+
+# Debugging and profiling
+ipdb>=0.13.0
+memory-profiler>=0.60.0
+line-profiler>=3.5.0
+
+# Type checking
+types-requests>=2.28.0
+types-pillow>=9.0.0
+types-python-dateutil>=2.8.0
+
+# Build and packaging
+build>=0.8.0
+twine>=4.0.0
+wheel>=0.37.0
+setuptools>=65.0.0
+
+# Git hooks and automation
+pre-commit-hooks>=4.3.0 

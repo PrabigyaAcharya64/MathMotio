@@ -1,0 +1,19 @@
+# Git LFS configuration for media files
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+*.tex filter=lfs diff=lfs merge=lfs -text
+
+# Keep these files as regular Git files
+*.py text
+*.md text
+*.txt text
+*.yml text
+*.yaml text
+*.json text
+*.html text
+*.css text
+*.js text 

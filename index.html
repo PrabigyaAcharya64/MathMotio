@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathMotio - AI-Powered Mathematical Animation Generator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #c9d1d9; /* Light text */
+        }
+        .section-heading {
+            font-size: 2.5rem; /* Equivalent to text-4xl */
+            font-weight: 700; /* Equivalent to font-bold */
+            color: #e6edf3; /* Lighter heading color */
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .card {
+            background-color: #161b22; /* Slightly lighter dark background for cards */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #30363d; /* Subtle border */
+        }
+        .code-block {
+            background-color: #010409; /* Even darker for code blocks */
+            color: #c9d1d9;
+            padding: 1rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            overflow-x: auto;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        }
+        .icon-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .icon-feature svg {
+            width: 2rem;
+            height: 2rem;
+            color: #58a6ff; /* Blue accent for icons */
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* rounded-xl */
+            border: 1px solid #30363d;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem; /* Spacing below How It Works cards */
+            margin-bottom: 4rem; /* Spacing above Examples section */
+        }
+        .gif-container img {
+            max-width: 60%; /* Made the GIF smaller */
+            height: auto;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #30363d;
+        }
+        /* Responsive adjustment for smaller screens */
+        @media (max-width: 768px) {
+            .gif-container img {
+                max-width: 90%; /* Adjust for mobile screens */
+            }
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+    <div class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+        <!-- Header/Hero Section -->
+        <header class="w-full max-w-5xl text-center mb-16 pt-8">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                MathMotio
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto mb-8">
+                Transforming Math Concepts into Stunning Animations with AI.
+            </p>
+            <a href="https://github.com/your-mathmotio-repo" target="_blank" rel="noopener" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold text-lg transition duration-300 ease-in-out">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.679-.217.679-.481 0-.237-.008-.865-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.007.07 1.532 1.03 1.532 1.03.892 1.529 2.341 1.089 2.91.833.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.93 0-1.088.387-1.979 1.029-2.671-.103-.253-.446-1.268.099-2.64 0 0 .84-.269 2.75 1.025A9.643 9.643 0 0112 6.844c.85.004 1.702.114 2.503.365 1.909-1.294 2.747-1.025 2.747-1.025.546 1.372.202 2.387.099 2.64.643.692 1.029 1.583 1.029 2.671 0 3.823-2.339 4.672-4.566 4.925.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C21.137 20.281 24 16.516 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" />
+                </svg>
+                View on GitHub
+            </a>
+        </header>
+
+        <main class="w-full max-w-6xl space-y-24">
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" class="text-center">
+                <h2 class="section-heading">How It Works</h2>
+                <div class="gif-container px-4">
+                    <img src="MathMotio.gif" alt="MathMotio Animation Example" onerror="this.onerror=null;this.src='https://placehold.co/800x450/21262d/8b949e?text=MathMotio+GIF+Placeholder';" />
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                    <div class="card flex flex-col items-center p-6 text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4">1</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Query Processing</h3>
+                        <p class="text-gray-400">User enters a natural language description. Advanced AI understands the mathematical concepts.</p>
+                    </div>
+                    <div class="card flex flex-col items-center p-6 text-center">
+                        <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4">2</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Code Generation & Verification</h3>
+                        <p class="text-gray-400">The Manim code is generated and validated.</p>
+                    </div>
+                    <div class="card flex flex-col items-center p-6 text-center">
+                        <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4">3</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Animation Rendering</h3>
+                        <p class="text-gray-400">The verified code is rendered using Manim, producing a high-quality MP4 video file.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Examples Section -->
+            <section id="examples" class="text-center">
+                <h2 class="section-heading">Examples</h2>
+                <p class="text-lg text-gray-400 mb-8">See some of the amazing animations MathMotio can create with simple prompts.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4 text-left">Prompt: Generate a Cosine Function</h3>
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/XZPyXUYaAJc" title="Cosine Function Animation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-gray-400 text-left">
+                            Generates: The graph of a cosine function (yellow) and illustrates the movement of a point along the curve.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4 text-left">Prompt: Generate the nature of Logarithmic Function</h3>
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/YNRGHC_FKdw" title="Logarithmic Function Animation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-gray-400 text-left">
+                            Generates: The graph of a logarithmic function (yellow) and demonstrates the movement of a point along the curve.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4 text-left">Prompt: Generate a Cubic Function</h3>
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/unza6DGhZxs" title="Cubic Function Animation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-gray-400 text-left">
+                            Generates: The graph of a cubic function (yellow), showcasing its form and behavior.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4 text-left">Prompt: Show the graph of y=(x-2)(x-3)</h3>
+                        <div class="video-container mb-4">
+                            <iframe src="https://www.youtube.com/embed/uc3P_TmYGLs" title="Parabolic Function Animation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-gray-400 text-left">
+                            Generates: The graph of the parabolic function y=(x-2)(x-3), highlighting its x-intercepts and overall shape.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-6xl text-center mt-24 py-8 border-t border-gray-700">
+            <p class="text-gray-500 text-lg">
+                <span class="text-white font-semibold">MathMotio</span> - Making mathematical animations accessible to everyone through AI.
+            </p>
+            <p class="text-gray-600 text-sm mt-2">&copy; 2025 MathMotio. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+# MathMotio - AI-Powered Mathematical Animation Generator
+# Core dependencies for mathematical animation generation
+
+# Google Gemini AI API
+google-generativeai>=0.3.0
+
+# Manim - Mathematical Animation Library
+manim[all]>=0.19.0
+
+# Core Python packages
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.5.0
+pillow>=8.3.0
+
+# Mathematical and scientific computing
+sympy>=1.10.0
+mpmath>=1.2.0
+
+# File handling and utilities
+requests>=2.28.0
+python-dotenv>=0.19.0
+pathlib2>=2.3.0
+
+# Text processing and formatting
+colorama>=0.4.4
+rich>=12.0.0
+tqdm>=4.64.0
+
+# Development and testing tools
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.991
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Optional: Web interface (if needed later)
+# flask>=2.2.0
+# flask-cors>=3.0.10
+
+# Optional: Video processing
+# ffmpeg-python>=0.2.0
+
+# Platform-specific dependencies
+# Windows
+# pywin32>=305; sys_platform == "win32"
+
+# macOS
+# pyobjc-framework-Cocoa>=9.0; sys_platform == "darwin"
+
+# Linux
+# python-xlib>=0.31; sys_platform == "linux"
