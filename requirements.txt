@@ -34,6 +34,9 @@ black>=22.0.0
 flake8>=5.0.0
 mypy>=0.991
 
+# Video processing
+ffmpeg-python>=0.2.0
+
 # Documentation
 sphinx>=5.0.0
 sphinx-rtd-theme>=1.0.0
@@ -42,8 +45,8 @@ sphinx-rtd-theme>=1.0.0
 # flask>=2.2.0
 # flask-cors>=3.0.10
 
-# Optional: Video processing
-# ffmpeg-python>=0.2.0
+
+
 
 # Platform-specific dependencies
 # Windows
