@@ -24,19 +24,48 @@ MathMotio is an innovative command-line tool that bridges the gap between mathem
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- pip (Python package installer)
-- Git
+- **Python 3.8 or higher**
+- **pip** (Python package installer)
+- **Git** (for cloning the repository)
+- **Manim** (mathematical animation library)
+- **FFmpeg** (for video rendering)
+- **LaTeX** (for mathematical notation rendering)
+- **Google Gemini API Key** (for AI code generation)
 
 ### Step-by-Step Installation
 
-1. **Clone the repository**
+1. **Install System Dependencies**
+
+   **Windows:**
+   ```bash
+   # Install FFmpeg
+   winget install ffmpeg
+   
+   # Install MiKTeX (LaTeX)
+   winget install MiKTeX.MiKTeX
+   ```
+
+   **macOS:**
+   ```bash
+   # Install FFmpeg and LaTeX
+   brew install ffmpeg
+   brew install --cask mactex
+   ```
+
+   **Linux (Ubuntu/Debian):**
+   ```bash
+   # Install FFmpeg and LaTeX
+   sudo apt update
+   sudo apt install ffmpeg texlive-full
+   ```
+
+2. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/MathMotio.git
    cd MathMotio
    ```
 
-2. **Create a virtual environment (recommended)**
+3. **Create a virtual environment (recommended)**
    ```bash
    python -m venv venv
    
@@ -47,20 +76,27 @@ MathMotio is an innovative command-line tool that bridges the gap between mathem
    source venv/bin/activate
    ```
 
-3. **Install dependencies**
+4. **Install Python dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Set up environment variables**
+5. **Set up environment variables**
    Create a `.env` file in the project root:
    ```env
    GEMINI_API_KEY=your_google_gemini_api_key_here
    ```
 
-5. **Verify installation**
+6. **Verify installation**
    ```bash
+   # Test Manim
    python -c "import manim; print('Manim installed successfully!')"
+   
+   # Test FFmpeg
+   ffmpeg -version
+   
+   # Test LaTeX
+   latex --version
    ```
 
 ## 🎯 Usage
@@ -205,9 +241,6 @@ See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
 
 - [Manim Community](https://manim.community/) for the amazing animation library
 - [Google Gemini AI](https://ai.google.dev/) for powerful natural language processing
-
-
-
 
 *Transform your mathematical ideas into visual reality!*
 
