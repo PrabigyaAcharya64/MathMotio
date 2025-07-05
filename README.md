@@ -1,4 +1,4 @@
-# MathMotio 🧮✨
+# MathMotio
 
 **AI-Powered Mathematical Animation Generator**
 
